@@ -1,0 +1,47 @@
+{
+    "name": "robole/last-visited-pages",
+    "version": "1.0.0",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Robole\\LastVisitedPages\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Robole\\LastVisitedPages\\Tests\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robole - Kabisch & Wilmer GbR",
+            "email": "info@robole.de",
+            "homepage": "https://robole.de",
+            "role": "Company"
+        }
+    ],
+    "require": {
+        "statamic/cms": "^5.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Last Visited Pages",
+            "description": "Save the most recently visited pages of a fronted user"
+        },
+        "laravel": {
+            "providers": [
+                "Robole\\LastVisitedPages\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
