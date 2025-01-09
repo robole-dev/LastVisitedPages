@@ -3,7 +3,7 @@
 
 # Last Visited Pages
 
-> A Statamic addon that saves the most recently visited pages of frontend users the session.
+> A Statamic addon that saves the most recently visited pages of frontend users in the session.
 
 ## Features
 
