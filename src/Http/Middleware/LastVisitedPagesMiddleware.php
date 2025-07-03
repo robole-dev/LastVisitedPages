@@ -29,8 +29,12 @@ class LastVisitedPagesMiddleware
         return $response;
     }
 
-    private function processRequest(Request $request, EntriesEntry $entry)
+    private function processRequest(Request $request, mixed $entry)
     {
+        if (!$entry instanceof EntriesEntry) {
+            return;
+        }
+
         $config = $this->getConfig();
         $entryBlueprint = $entry->blueprint->handle;
         $entrySite = $entry->site()->handle;
