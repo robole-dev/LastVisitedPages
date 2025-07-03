@@ -3,15 +3,17 @@
 
 # Last Visited Pages
 
-> A Statamic addon that saves the most recently visited pages of frontend users in the session.
+> A Statamic addon that stores the most recently visited pages of a visitor.
 
 ## Features
 
-- Save the most recently visited pages of users in their session.
+- Save the most recently visited pages of visitors in their session.
 - Customizable limits for the number of saved pages.
 - Multisite compatibility to save and filter pages by site or across sites.
 - Flexible inclusion and exclusion of collections.
 - Provides the {{ last_visited_pages }} tag to display the saved pages in templates.
+
+Note: This addon will skip non-entry-like page types (e.g. `LocalizedTerm`).
 
 ## Installation
 
@@ -43,7 +45,7 @@ __Site Sensitivity__
 
 - Key: __site_sensitive__
 - Default: true
-- Description: If enabled, only pages from the same site as the current one will be saved and displayed by the {{ last_visited_pages }} tag.
+- Description: (Only relevant for multi-site mode) If enabled, only pages from the same site as the current one will be saved and displayed by the {{ last_visited_pages }} tag.
 
 __Collections__
 
