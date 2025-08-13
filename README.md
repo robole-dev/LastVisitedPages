@@ -1,9 +1,10 @@
 <div align="center">
     <img src="icon.svg">
     <h1>Last Visited Pages</h1>
+    <blockquote>
+        <p dir="auto">Statamic addon that stores the most recently visited pages of a visitor.</p>
+    </blockquote>
 </div>
-
-> Statamic addon that stores the most recently visited pages of a visitor.
 
 ![GitHub release](https://flat.badgen.net/github/release/robole-dev/LastVisitedPages)
 ![Supports Statamic 5 or later](https://flat.badgen.net/badge/Statamic/5.0+/FF269E?icon=php)
