@@ -37,9 +37,10 @@ class LastVisitedPagesMiddleware
 
         $config = $this->getConfig();
         $entryBlueprint = $entry->blueprint->handle;
+        $entryTemplate = $entry->template();
         $entrySite = $entry->site()->handle;
 
-        if ($this->shouldExcludeEntry($entryBlueprint, $config)) {
+        if ($this->shouldExcludeEntry($entryBlueprint, $entryTemplate, $config)) {
             return;
         }
 
@@ -62,16 +63,21 @@ class LastVisitedPagesMiddleware
             'maxSavedPages' => config('last-visited-pages.max_saved_pages', 5),
             'includeCollections' => config('last-visited-pages.include_collections', ['*']),
             'excludeCollections' => config('last-visited-pages.exclude_collections', []),
+            'excludeTemplates' => config('last-visited-pages.exclude_templates', []),
         ];
     }
 
-    private function shouldExcludeEntry($entryBlueprint, $config)
+    private function shouldExcludeEntry($entryBlueprint, $entryTemplate, $config)
     {
         if (! in_array('*', $config['includeCollections']) && ! in_array($entryBlueprint, $config['includeCollections'])) {
             return true;
         }
 
         if (in_array($entryBlueprint, $config['excludeCollections'])) {
+            return true;
+        }
+
+        if (in_array($entryTemplate, $config['excludeTemplates'])) {
             return true;
         }
 

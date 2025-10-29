@@ -41,4 +41,14 @@ return [
     'include_collections' => ['*'],
 
     'exclude_collections' => [],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Templates
+    |--------------------------------------------------------------------------
+    |
+    | Define which templates should be excluded from tracking.
+    |
+    */
+    'exclude_templates' => [],
 ];

@@ -62,10 +62,24 @@ The published configuration file allows you to adjust the following settings:
 - Description:
   Use `include_collections` to specify which collections should be tracked. Set to `['*']` to include all collections.
   Use `exclude_collections` to define collections that should be ignored from tracking.
-  Example:
+- Example:
   ```php
   'include_collections' => ['blog', 'products'],
   'exclude_collections' => ['drafts'],
+  ```
+
+**Templates**
+
+- Key: **exclude_templates**
+- Default:
+  ```php
+  'exclude_templates' => [],
+  ```
+- Description:
+  Use `exclude_templates` to define templates that should be ignored from tracking. 
+- Example:
+  ```php
+  'exclude_templates' => ['service', 'article'],
   ```
 
 ## Templating
